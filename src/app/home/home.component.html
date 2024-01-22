@@ -1,0 +1,212 @@
+<main class="main">
+    <div class="responsive-wrapper">
+        <div class="content">
+            <div class="content-main">
+                <div class="card-grid">
+                    <article class="card text-center" *ngFor="let integration of Attendance">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ integration.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="col-sm-12">
+                                <div id="homeRunningClock" class="runningClock" style="font-size: medium;">17:50:42
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div id="attendanceTable"
+                                    style="height: 120px; border-radius: 10px; display: block; margin: 5px; overflow-y: auto;">
+                                    <form id="attendanceTable_ui_form_id"
+                                        style="width:100%;padding:.2em;display:inline-block;height:auto"><input
+                                            id="attendanceTable_BIZ_CASE_ID" type="hidden" value="IA00571"><input
+                                            type="hidden" id="attendanceTable_URN" name="attendanceTable_URN"
+                                            value="240108111536226280">
+                                        <div id="attendanceTable_ui_table_div" style="width:100%;height:auto;">
+                                            <div id="attendanceTable_TR0"
+                                                style="width:100%;display:inline-block;vertical-align: middle;">
+                                                <div id="TD_newElement0"
+                                                    style="padding:0;margin:0;float:left;width:100%;display:inline-block;overflow:visible;vertical-align: middle;"
+                                                    valign="top" class="mainTableTD">
+                                                    <div id="newElement0_tableHeader"
+                                                        style="width: 100%; display: none; padding: 1px; margin: 0px;">
+                                                        <div class="subTitle"
+                                                            style="float: left; display: inline-block; width: 50%;">
+                                                        </div>
+                                                        <div id="newElement0_XL"
+                                                            style="display: none; float: right; width: 5%; padding: 0.5em; margin: 0px;">
+                                                            <img src="/bizcase/jsp/icons/excel.png" width="30"
+                                                                height="30"
+                                                                title="Click to Export the Table Data into XL File"
+                                                                onclick="javascript:exceller('newElement0');">
+                                                        </div>
+                                                        <div
+                                                            style="float: right; display: inline-block; width: 30%; padding: 1px; margin: 0px;">
+                                                            <input id="newElement0_searchInput" type="text"
+                                                                class="inputField"
+                                                                style="display:none;width:100% !important;background-image: url('/bizcase/jsp/icons/searchicon.png');background-color: transparent;background-repeat: no-repeat;background-position: 0px 0px;width:100%;padding-left:2em;padding-top:.5em;padding-bottom:.5em;"
+                                                                placeholder="Search .."
+                                                                onkeyup="searchTableFunction('newElement0')">
+                                                        </div>
+                                                    </div>
+                                                    <div class="dmfw-dtable-wrapper"
+                                                        style="overflow-y: auto; max-height: 100px;">
+                                                        <table id="newElement0" name="newElement0" height="50%"
+                                                            class="dmfw-dtable-classic"
+                                                            style="overflow: visible; width: 100%;">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td colspan="1" id="UI_001.newElement0.In-Time"
+                                                                        style="width: 49.5%;">In-Time</td>
+                                                                    <td colspan="1" id="UI_001.newElement0.Out-Time"
+                                                                        style="width: 49.5%;">Out-Time</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3" id="newElement0_NoRecordMsg"
+                                                                        style="text-align: center; background: white;">
+                                                                        <img src="https://livedigiflowsdk.s3.ap-southeast-1.amazonaws.com/digiflowcnt/1000/100/images/norecords.png"
+                                                                            height="40" width="40"><span
+                                                                            style="padding:1em">No Records Found</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </thead>
+                                                        </table><input id="UI_001.newElement0.DYNA_RECORD_COUNT"
+                                                            name="UI_001.newElement0.DYNA_RECORD_COUNT" type="hidden"
+                                                            value="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="card text-center" *ngFor="let  MyApprovals of MyApprovals">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ MyApprovals.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <img src="../../assets/taskcompleted.png" alt="">
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="card text-center" *ngFor="let  QuickLinks of QuickLinks">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ QuickLinks.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <button type="button" class=" btn btn-lg" style="border-radius: 1px;">Apply
+                                    Leave</button><br>
+                                <button type="button" class=" btn btn-lg">View My Payslip</button>
+                                <button type="button" class=" btn btn-lg">My time Sheet</button>
+                            </div>
+                        </div>
+
+                    </article>
+                    <article class="card text-center" *ngFor="let  Birthdays of Birthdays">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ Birthdays.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div style="width:100%;float:left;padding:0.5em;">
+                                <!-- <p class="home_icon_text">Birthdays</p> -->
+                                <img class="nobirthdays" id="noBirthdays" style="display: none;">
+                                <div id="noBirthdayMsg" style="text-align: center;display: none;background: aliceblue;
+                          font-weight: bold;"></div>
+                                <table id="birthdaytable" class="wishesTables"
+                                    style="overflow-y:auto;width: 100%; border-collapse: separate; border-spacing: 15px;">
+                                    <tbody>
+                                        <tr>
+                                            <td class="intials" bgcolor="#BBC">AJ</td>
+                                            <td>Ajay Dalli<br>8th - Jan</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td class="intials" bgcolor="#CDE">VA</td>
+                                            <td>Vamsi Dobbala<br>9th - Jan</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td class="intials" bgcolor="#AED">HE</td>
+                                            <td>Hemanth Patchipala<br>9th - Jan</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td class="intials" bgcolor="#ACE">DI</td>
+                                            <td>Divya Teja Meka<br>10th - Jan</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td class="intials" bgcolor="#EAD">AK</td>
+                                            <td>Akshita Tyagi<br>10th - Jan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </article>
+                    <article class="card text-center" *ngFor="let Anniversaries of Anniversaries">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ Anniversaries.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <table id="annivesarytable" class="wishesTables"
+                                style="overflow-y:auto;width: 100%;  border-collapse: separate; border-spacing: 15px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="intials" bgcolor="#DDE">SA</td>
+                                        <td>Sahithi Molguri(2 - years)<br>10th - Jan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </article>
+                    <article class="card" *ngFor="let  Upcomingholidays of Upcomingholidays">
+                        <div class="card-header">
+                            <div>
+
+                                <h5>{{ Upcomingholidays.name }}</h5>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <p>{{Upcomingholidays.description }}</p>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

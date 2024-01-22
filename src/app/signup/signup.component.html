@@ -1,0 +1,80 @@
+<body>
+  <ngx-ui-loader [loaderId]="'loader-06'"></ngx-ui-loader>
+    <section>
+      <div class="container">
+        
+        <div class="user signinBx carousel-container">
+          <!-- <img src="../../assets/Bilvanties hide logo.png"> -->
+         <!-- <div>
+          
+         </div> -->
+          <div class="imgBx">
+            <!-- <img src="../../assets/Login page background image.png"> -->
+            <div>
+              <img src="../../assets/Bilvanties hide logo.png" style="width: 220px;height: 45px;margin-top: 10px !important;margin-left: 20px !important;">
+              
+            </div>
+            
+            <div>
+              <img src="../../assets/hr logo.jpg" style="width: 65%;height: 50%;margin-top: 30%;margin-left: 16%;border-radius: 132px;">
+              
+            </div>
+            <div class="Content ml-5">
+              <span>Design Innovation,Driven By Solutions</span>
+              <p class="ml-5">Delivering Values</p>
+
+            </div>
+
+          </div>
+          <div class="formBx">
+            <!-- <div >
+              <img src="../../assets/Bilvanties hide logo.png">
+            </div> --> 
+            
+            <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()" #myform2="ngForm">
+                <img src="../../assets/Bilvantis logo.png" width="250px" class="ml-4 mb-5">
+              <h2 style="color: #044196; font-family: poppins;">Sign In</h2>
+              <input type="text" name="" placeholder="EMPID" formControlName="EMPID" />
+              <div *ngIf="SignupForm.get('EMPID')?.hasError('required') && myform2.submitted">
+                <p style="color: red;font-size: 12px; font-family: poppins;"> Required Employee ID</p>
+              </div>
+              <div *ngIf="SignupForm.get('EMPID')?.hasError('minlength')">
+                <p style="color: red; font-size: 12px; font-family: poppins;">Employee id must have at least 10 Numbers.</p> 
+               </div>
+              <input type="password" name="" placeholder="Password" formControlName="password"/>
+              <div *ngIf="SignupForm.get('password')?.hasError('required') && myform2.submitted">
+                <p style="color: red; font-size: 12px; font-family: poppins;">Password is required.</p>
+              </div>
+              <div *ngIf="SignupForm.get('password')?.hasError('minlength')">
+               <P style="color: red; font-size: 12px; font-family: poppins;">Password must have at least 7 characters</P> .
+              </div>
+              <input type="submit" name="" value="Login" (click)="handle()"> 
+              <p class="signup">
+                Forget Password?<a  (click)="open();">
+                  Reset
+                </a>
+              </p> 
+            </form>
+          </div>
+        </div>
+        <!-- <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Create an Account</h2>
+              <input type="text" name="" placeholder="Username" />
+              <input type="email" name="" placeholder="Email Id" />
+              <input type="password" name="" placeholder="Create Password" />
+              <input type="password" name="" placeholder="Confirm Password" />
+              <input type="submit" name="" value="Sign Up" />
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();"> Sign In </a>
+              </p> 
+            </form>
+          </div>
+           <div class="imgBx"><img src="https://images.unsplash.com/photo-1628972799193-1a6be77e183e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" /></div> 
+        </div>-->
+      </div>  
+    </section>
+ 
+  </body>

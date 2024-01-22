@@ -1,0 +1,45 @@
+<body>
+    <section>
+      <div class="container">
+        <div class="user signinBx carousel-container">
+         
+          <div class="imgBx">
+            <div>
+                <img src="../../assets/Bilvanties hide logo.png" style="width: 220px;height: 45px;margin-top: 10px !important;margin-left: 20px !important;">
+                
+              </div>
+              
+              <div>
+                <img src="../../assets/hr logo.jpg" style="width: 65%;height: 50%;margin-top: 30%;margin-left: 16%;border-radius: 132px;">
+                
+              </div>
+              <div class="Content ml-5">
+                <span>Design Innovation,Driven By Solutions</span>
+                <p class="ml-5">Delivering Values</p>
+  
+              </div>
+        </div>
+
+
+          <div class="formBx">
+            <form [formGroup]="ResetForm" (ngSubmit)="onSubmit()" #myform2="ngForm">
+                <img src="../../assets/Bilvantis logo.png" width="250px" class="ml-4 mb-5">
+              <h2 style="color: #044196; font-family: poppins;">Reset Password</h2>
+              <p style="font-size: x-small;font-family: poppins;font-weight: 500;">We’ll help you reset it and get back on track</p>
+              <input type="text" name="" placeholder="EMPID" formControlName="EMPID" />
+              <div *ngIf="ResetForm.get('EMPID')?.hasError('required') && myform2.submitted">
+                <p style="color: red;"> Required Employee ID</p>
+              </div>
+              <div *ngIf="ResetForm.get('EMPID')?.hasError('minlength')">
+                <p style="color: red; font-size: 12px; font-family: poppins;">Employee id must have at least 10 Numbers.</p> 
+               </div> 
+              <input type="submit" name="" value="Send OTP" (click)="handle()"> 
+            </form>
+          </div>
+        </div>
+       
+      </div>  
+    </section>
+ 
+  </body>
+

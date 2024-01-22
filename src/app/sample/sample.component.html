@@ -1,0 +1,92 @@
+ <div class='dashboard'>
+    <div class="dashboard-nav">
+        <header><a  class="menu-toggle"><i class="fas fa-bars"></i></a><a class="brand-logo"><i
+                    class="fas fa-anchor"> </i> <img src="../../assets/Bilvanties hide logo.png" width="160px"></a></header>
+        <nav class="dashboard-nav-list"><a class="dashboard-nav-item"><i class="fas fa-home" (click)="homes()"></i>
+                Home </a>
+          <div class='dashboard-nav-dropdown'><a class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                        class="fas fa-photo-video"></i> For Me </a>
+                <div class='dashboard-nav-dropdown-menu'><a class="dashboard-nav-dropdown-item" (click)="profil()">MY Profile</a>
+                    <div class='dashboard-nav-dropdown'><a class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                        class="fas fa-photo-video"></i> Performence</a>
+                       
+                        <div  class='dashboard-nav-dropdown-menu'>
+                            <a
+                            class="dashboard-nav-dropdown-item belowNav"(click)="Dash()">Dashboard</a><a
+                            class="dashboard-nav-dropdown-item belowNav"(click)="goals()" >My Goals</a>
+                        <a class="dashboard-nav-dropdown-item belowNav" (click)="self()">Self Assessment</a>
+                        <a class="dashboard-nav-dropdown-item belowNav" (click)="Performance()">Performance History</a>
+                        <!-- <a class="dashboard-nav-dropdown-item belowNav">Realign Goals</a>
+                        <a class="dashboard-nav-dropdown-item belowNav">Recommended Traning</a>
+                        <a class="dashboard-nav-dropdown-item belowNav">My Development Plan</a> -->
+                        </div>
+                    </div>
+                    <div>
+                        <a class="dashboard-nav-item"><i class="fas fa-home" (click)="Resignation()"></i>
+                            Submit Resignation </a>
+                       </div>
+                   
+                      
+
+                </div>
+               
+            </div> 
+           
+            
+            
+        </nav>
+    </div>
+    <div class='dashboard-app'>
+        <header class='dashboard-toolbar'><a class="menu-toggle"><i class="fas fa-bars"></i> <img
+                    src="../../assets/icons8-menu-24.png" alt=""></a>
+                    <div style="margin-left: auto;margin-right: 10px;">
+                        <div class="popover__wrapper">
+                            <h2 class="popover__title">
+                              <div>
+                                <img src="../../assets/icons8-user.gif" width="25px"  class=" mt-3  ">
+                              </div>
+                            </h2>
+                  
+                            <div class="popover__content">
+                              <div class="notification-list w-100">
+                                <div style="cursor: pointer;white-space: nowrap;" class="d-flex " >
+                                  
+                                  <span style=" height: 25px; opacity: 0.3;" ></span>
+                                  <div class="mx-auto " style="font-weight: 600;" (click)="logout()">Log out</div>
+                                
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>       
+        </header>
+        <div class='dashboard-content'>
+            <div class='container'>
+                <div class='card'>
+                    <div *ngIf="home">
+                        <app-home></app-home>
+                    </div>
+                    <div *ngIf="profilactive">
+                        <app-myprofile></app-myprofile>
+                    </div>
+                    <div *ngIf="Dashboard">
+                        <app-dashboard></app-dashboard>
+                    </div>
+                    <div *ngIf="Goals">
+                        <app-mygoals></app-mygoals>
+                    </div>
+                    <div *ngIf="Assessment">
+                        <app-self-assessement></app-self-assessement>
+                    </div>
+                    <div *ngIf="manager">
+                        <app-manager-review></app-manager-review>
+                    </div>
+                    <div *ngIf="Resign">
+                        <app-resignation></app-resignation>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+

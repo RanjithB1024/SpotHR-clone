@@ -1,0 +1,153 @@
+
+<div class="container-fluid">
+   
+    <div class="d-flex justify-content-center mt-5">
+        
+        <div class="mb-3 card" >
+            <div style="margin-left: auto;" class="mt-3 mr-3">
+                <button class="  btn  " (click)="formeenable()"><img src="../../assets/icons8-edit (1).gif" width="20px" alt=""></button>
+            </div>
+           
+            <div class="row">
+                <div class="col-4 mt- ml-4">
+                     <img src="../../assets/male avatar.png"  width="60%">
+                      <!-- <a><input type="file"></a> -->
+                </div>
+                <div class="col-8  " style="margin-left:-15%;">
+                    <form [formGroup]="profile">
+
+                        <table style="width:100%;font-family: poppins;" class="ml-5 mt-4">
+                            <tr>
+                              <td>User name</td>
+                              <td *ngIf="formOpen else elseblock">
+                                <input type="text" placeholder="enter form" formControlName="username">
+                              </td>
+                              <ng-template #elseblock>
+                                {{sampleuserData?.username}}
+                            </ng-template>
+                            </tr>
+                              <tr>
+                              <td>Job</td>
+                              <td *ngIf="formOpen else block">
+                                <input type="text" placeholder="enter form" formControlName="job"></td>
+                              <ng-template #block>
+                                {{sampleuserData?.job}}
+                            </ng-template>
+                            </tr>
+                            <tr>
+                              <td>DOB</td>
+                              <td  *ngIf="formOpen else elses">
+                                <input type="date" placeholder="enter form" formControlName="dob"></td>
+                              <ng-template #elses>
+                                {{sampleuserData?.dob}}
+                            </ng-template>
+                            </tr>
+                            <tr>
+                                <td>Education Qualification</td>
+                                <td *ngIf="formOpen else EDQ">
+                                     <input type="text" placeholder="enter form" formControlName="Education"></td>
+                                <ng-template #EDQ>
+                                    {{sampleuserData?.Education}}
+                                </ng-template>
+                              </tr>
+                              <tr>
+                                <td>Contact</td>
+                                <td *ngIf="formOpen else contact">
+                                    <input type="number" placeholder="enter form" formControlName="contact"></td>
+                                <ng-template #contact>
+                                    {{sampleuserData?.contact}}
+                                </ng-template>
+                              </tr>
+                              <tr>
+                                <td>Email</td>
+                                <td *ngIf="formOpen else mail">
+                                    <input type="email" placeholder="enter form" formControlName="email"></td>
+                                <ng-template #mail>
+                                    {{sampleuserData?.email}}
+                                </ng-template>
+                              </tr>
+                              <tr>
+                                <td>Emergency Contact</td>
+                                <td *ngIf="formOpen else Emy">
+                                    <input type="number" placeholder="Enter number" formControlName="emergancy"></td>
+                                <ng-template #Emy>
+                                    {{sampleuserData?.emergancy}}
+                                </ng-template>
+                              </tr>
+                              <tr>
+                                <td>Blood Group</td>
+                                <td *ngIf="formOpen else blood">
+                                    <input type="text" placeholder="Enter number" formControlName="blood_Group"></td>
+                                <ng-template #blood>
+                                    {{sampleuserData?.blood_Group}}
+                                </ng-template>
+                              </tr>
+                              <tr>
+                                <td>Permanent Address</td>
+                                <td *ngIf="formOpen else Address">
+                                  <input type="text" id="Address" formControlName="Address"></td>
+                                <ng-template #Address>
+                                  {{sampleuserData?.Address}}
+                              </ng-template>
+                                
+                              </tr>
+                                <tr>
+                                <td>City</td>
+                                <td *ngIf="formOpen else City">
+                                  <input type="text" id="City" formControlName="City"></td>
+                                <ng-template #City>
+                                  {{sampleuserData?.City}}
+                              </ng-template>
+                              </tr>
+                              <tr>
+                                <td>State</td>
+                                <td *ngIf="formOpen else State">
+                                  <input type="text" id="State" formControlName="State"></td>
+                                <ng-template #State>
+                                  {{sampleuserData?.State}}
+                              </ng-template>
+                              </tr>
+                              <tr>
+                                  <td>Country</td>
+                                  <td *ngIf="formOpen else Country">
+                                      <input type="text" id="Country" formControlName="Country"></td>
+                                  <ng-template #Country>
+                                      {{sampleuserData?.Country}}
+                                  </ng-template>
+                                </tr>
+                                <!-- {{this.profile.value.Pincode}} -->
+                                <tr>
+                                  <td>Pincode</td>
+                                  <td *ngIf="formOpen else Pincode">
+                                      <input type="text" id="Address" formControlName="Pincode"></td>
+                                      <ng-template #Pincode>
+                                          {{sampleuserData?.Pincode}}
+                                      </ng-template>
+                                </tr>
+                                <tr>
+                                  <td>Hobbies</td>
+                                  <td *ngIf="formOpen else Hobbies">
+                                      <input type="text" id="Hobbies" formControlName="Hobbies"></td>
+                                  <ng-template #Hobbies>
+                                      {{sampleuserData?.Hobbies}}
+                                  </ng-template>
+                                </tr>
+                          </table>
+                   
+                   
+                </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 ml-5">
+      
+                </div>
+    
+    </div>
+   
+    <div *ngIf="formOpen" style="margin-left: auto; background-color:#013579 ;" class="mt-3 mr-3 mb-3">
+    <button class="btn" style="color: white;" (click)="submiteditedform()">Save</button>
+    </div>
+
+
+</div>
