@@ -28,6 +28,8 @@ const routes: Routes = [
 {path:'charts',component:ChartsComponent},
 {path:'side',component:SideComponent},
 {path:'signup',component:SignupComponent},
+{path:'**',component:SignupComponent},
+
 {path:'home',component:HomeComponent},
 {path:'self',component:SelfAssessementComponent},
 {path:'manager',component:ManagerReviewComponent},
