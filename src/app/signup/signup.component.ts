@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private router: Router,private ngxService: NgxUiLoaderService) {
     this.SignupForm = this.formBuilder.group({
-      EMPID: ['', [Validators.required, Validators.minLength(10)]],
+      EMPID: ['', [Validators.required, Validators.minLength(7)]],
       password: ['', [Validators.required, Validators.minLength(3)]],
       
     });
@@ -37,8 +37,8 @@ export class SignupComponent implements OnInit {
         const enteredEMPID = this.SignupForm.get('EMPID')?.value;
         const enteredPassword = this.SignupForm.get('password')?.value;
     
-        const expectedEMPID ='BTIN100144'
-        const expectedPassword =  'sai1996'
+        const expectedEMPID ='5001001'
+        const expectedPassword =  '5001001'
   
        
     

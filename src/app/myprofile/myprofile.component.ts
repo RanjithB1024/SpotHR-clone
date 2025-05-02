@@ -39,20 +39,20 @@ sampleuserData:any
   }
   ngOnInit(): void {
     this.sampleuserData={
-      "username":"Sai krishna",
-      "job":"Programmer analiyest",
-      "dob":"11/15/1996",
-      "Education":"Master of computer application",
-      "contact":"9705309449",
-      "email":"eedarasai96@gmail.com",
-      "emergancy":"9985223045",
-      "blood_Group":"O positive",
-      "Address":"kukatpally balaji nagar",
+      "username":"Ranjith Behara",
+      "job":"Engineering Manager",
+      "dob":"10/24/1989",
+      "Education":"Master of Technology",
+      "contact":"7207298976",
+      "email":"ranjith.behara@innovapptive.com",
+      "emergancy":"7207298976",
+      "blood_Group":"B positive",
+      "Address":"kukatpally",
       "City":"Hyderbad",
       "State":"Telangana",
       "Country":"India",
       "Pincode":"500072",
-      "Hobbies":"Cricket"
+      "Hobbies":"Cooking"
 
     }
     console.log("this is the corresponding sampleuserData",this.sampleuserData);

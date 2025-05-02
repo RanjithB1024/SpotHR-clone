@@ -13,7 +13,7 @@ export class ManagerReviewComponent implements OnInit {
   viewgoals: boolean = false;  
 
   performanceHistoryItems: any[] = [
-    { employeeId: 'BTIN100144', employeeName: 'Sai Krishna Edara', year: 2023, reviewType: 'Q3', finalRating: 3.0 },
+    { employeeId: '5001001', employeeName: 'Ranjith Behara', year: 2024, reviewType: 'Q1', finalRating: 4.5 },
     
   ];
 

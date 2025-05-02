@@ -35,7 +35,7 @@ export class OTPComponent implements OnInit{
       const enteredConfirmpassword = this.ForgetPasswordForm.get('Confirmpassword')?.value;
   
       const expectedOTP ='123456'
-      const expectedConfirmpassword = 'sai1996'
+      const expectedConfirmpassword = '5001001'
 
      
   

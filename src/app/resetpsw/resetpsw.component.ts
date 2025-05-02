@@ -18,7 +18,7 @@ export class ResetpswComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private router: Router) {
     this.ResetForm = this.formBuilder.group({
-      EMPID: ['', [Validators.required, Validators.minLength(10)]],
+      EMPID: ['', [Validators.required, Validators.minLength(7)]],
      
       
     });
@@ -37,7 +37,7 @@ export class ResetpswComponent implements OnInit {
         const enteredEMPID = this.ResetForm.get('EMPID')?.value;
        
     
-        const expectedEMPID ='BTIN100144'
+        const expectedEMPID ='5001001'
        
   
        

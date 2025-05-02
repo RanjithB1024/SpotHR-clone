@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   Attendance = [
-    { name: 'Todays Attendence',  checked: true },
+    { name: 'Todays Attendance',  checked: true },
     
   ];
   MyApprovals = [
